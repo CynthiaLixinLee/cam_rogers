@@ -1,0 +1,130 @@
+body,
+button {
+  font-family: "K2D", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 10vh;
+}
+h2 {
+  font-size: 5vh;
+}
+h3 {
+  font-size: 4vh;
+}
+p {
+  font-size: 2.5vh;
+}
+blockquote {
+  font-size: 2.5vh;
+  font-style: italic;
+}
+
+h2,
+h3 {
+  text-align: left;
+}
+h1,
+.header h2 {
+  text-align: center;
+}
+
+.container {
+  padding: 1vw 4.5vw;
+  width: 90vw;
+}
+
+img {
+  max-width: 80vw;
+  height: auto;
+}
+
+#header {
+  background: url("images/header.jpg") no-repeat center;
+  background-position: 50% 40%;
+  width: 100vw;
+  height: 58vw;
+  background-size: cover;
+}
+
+.header {
+  color: rgb(228, 226, 226);
+  padding-top: 25vw;
+}
+.header h1,
+.header h2 {
+  font-weight: 300;
+}
+
+.about,
+.book,
+.game-flex {
+  display: flex;
+}
+.flex-text {
+  padding: 0 3vw;
+  flex-basis: 68%;
+}
+.flex-image {
+  align-self: flex-start;
+  padding-top: 15vh;
+}
+.flex-image img {
+  background-size: contain;
+  width: 24vw;
+}
+
+.book .flex-image {
+  order: -1;
+}
+
+#books {
+  background-color: aliceblue;
+}
+
+.game {
+  max-width: 30vw;
+  padding: 0 2vw;
+}
+.game h2 {
+  height: 9vh;
+  font-size: 4.5vh;
+  margin: 0 0 5vh 0;
+  text-align: center;
+}
+.game p {
+  text-align: center;
+}
+.game img {
+  object-fit: cover;
+  width: 26vw;
+  height: 30vw;
+}
+
+button {
+  border: 1px solid transparent;
+  background-color: transparent;
+  position: relative;
+  width: 38%;
+  margin-left: 21%;
+  font-size: 2vh;
+}
+button:hover {
+  border: 1px solid grey;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 850px) {
+  .about,
+  .book,
+  .game-flex {
+    flex-direction: column;
+  }
+  .flex-image {
+    align-self: center;
+    padding-top: 0;
+  }
+}
+
+/* If portrait, change vh to vw */
