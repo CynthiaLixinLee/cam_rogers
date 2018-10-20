@@ -1,9 +1,12 @@
+body {
+  background: url(images/abstract1.png);
+  overflow-x: hidden;
+}
 body,
 button {
-  font-family: "K2D", sans-serif;
   margin: 0;
+  font-family: "K2D", sans-serif;
 }
-
 h1 {
   font-size: 9vw;
 }
@@ -11,7 +14,8 @@ h2 {
   font-size: 3vw;
 }
 h3 {
-  font-size: 2.5vw;
+  font-size: 2vw;
+  color: slategray;
 }
 p {
   font-size: 3vmin;
@@ -31,16 +35,15 @@ h1,
 }
 
 .container {
-  padding: 1vw 4.5vw;
+  padding: 1.5vw 4.5vw 5vw 4.5vw;
   width: 90vw;
 }
 
 #header {
   background: url("images/header.jpg") no-repeat center;
   background-position: 50% 40%;
-  width: 98vw;
+  width: 100vw;
   height: 58vw;
-  margin-left: 0.5vw;
   background-size: cover;
 }
 
@@ -78,8 +81,13 @@ h1,
   width: 20vw;
 }
 
-#books {
-  background-color: aliceblue;
+#books:after,
+#about:after {
+  content: "";
+  position: absolute;
+  width: 70vw;
+  margin: 0 15vw;
+  border-bottom: 2px solid grey;
 }
 
 .game {
@@ -89,7 +97,7 @@ h1,
 .game h2 {
   height: 4vw;
   font-size: 2.3vw;
-  margin: 0 0 5vh 0;
+  margin: 0 0 5vw 0;
   text-align: center;
 }
 .game p {
@@ -113,10 +121,33 @@ button {
   width: 38%;
   margin: 2vh 0 0 30%;
   font-size: 2vh;
+  padding: 4px;
 }
 button:hover {
   border: 1px solid grey;
   font-weight: bold;
+}
+.social {
+  display: flex;
+  justify-content: center;
+}
+.icon {
+  max-width: 40px;
+  max-height: 40px;
+  width: 10vw;
+  height: 10vw;
+}
+.facebook {
+  background: url("images/fb.jpg") no-repeat center;
+  background-size: cover;
+}
+.twitter {
+  background: url("images/twitter.jpg") no-repeat center;
+  background-size: cover;
+  margin-left: 6vh;
+}
+.footer {
+  text-align: center;
 }
 
 /* Responsiveness */
@@ -132,8 +163,30 @@ button:hover {
     align-self: center;
     padding-top: 0;
   }
+  .book .flex-image {
+    order: 0;
+    width: 50vw;
+  }
+  .flex-image img {
+    width: 50vw;
+  }
+  button {
+    width: 60%;
+    margin: 1vh 0 0 19%;
+    border: 1px solid grey;
+    font-weight: bold;
+  }
   .game h2 {
-    height: 2vw;
+    height: 4vw;
+  }
+  .game:nth-child(2) h2 {
+    height: 12vw;
+  }
+  .game img {
+    width: 52vw;
+  }
+  .game p {
+    margin: 0 auto 5vh;
   }
   .header {
     padding-top: 18vw;
@@ -149,12 +202,15 @@ button:hover {
   h3 {
     font-size: 5.5vw;
   }
+  .footer .container {
+    padding: 12vw 4.5vw 5vw 4.5vw;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   p,
   blockquote {
-    font-size: 24px;
+    font-size: 20px;
   }
   h1 {
     font-size: 85px;
@@ -165,13 +221,9 @@ button:hover {
   h3 {
     font-size: 32px;
   }
-}
-
-@media only screen and (min-width: 1400px) {
   .container {
-    max-width: 70vw;
+    width: 80vw;
     margin: auto;
+    max-width: 1100px;
   }
 }
-
-/* If portrait, change vh to vw */
